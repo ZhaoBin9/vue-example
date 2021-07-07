@@ -12,7 +12,6 @@ arrayMethods.forEach(method => {
         inserted = arguments
         break;
       case 'splice':
-        console.log(Array.prototype, arguments)
         inserted = [].slice.call(arguments, 2)
         break
       default:

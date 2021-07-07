@@ -1,4 +1,5 @@
 import observe from './observe'
+import Watcher from './Watcher'
 
 const data = {
   a: {
@@ -7,6 +8,13 @@ const data = {
   m: [1, 2, 3]
 }
 observe(data)
-data.a
-data.m.splice(0, 1, 3)
+new Watcher(data, 'a.b', (val, oldVal) => {
+  console.log('wacther', val, oldVal)
+})
+data.a.b++
+data.a.b++
+data.a.b++
+data.a.b++
+data.a.b++
+// data.m.splice(0, 1, 3)
 // console.log('sss')
