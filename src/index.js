@@ -1,6 +1,6 @@
-import observe from './observe'
-import Watcher from './Watcher'
-import complier from './complier'
+
+// import complier from './complier'
+import Vue from './vue'
 
 // const data = {
 //   a: {

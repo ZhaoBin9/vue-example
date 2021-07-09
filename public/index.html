@@ -7,6 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="app">
+        你好{{a}}
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+    </div>
     <script src="/xuni/bundle.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                a: 1
+            },
+            watch: {
+                a() {
+                    console.log('a改变了')
+                }
+            }
+        })
+
+        vm.a++
+        vm.a++
+    </script>
 </body>
 </html>

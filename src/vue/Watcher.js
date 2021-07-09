@@ -34,7 +34,7 @@ export default class Watcher {
   }
 
   getAndInovke(callback) {
-    const value = this.get()
+    const value = this.getter(this.target)
     if(value !== this.value || typeof value === 'object') {
       const oldValue = this.value
       this.value = value
